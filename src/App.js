@@ -17,6 +17,7 @@ const getNews = () => {
     console.log(error)
   })
 }
+// run one
 useEffect(() => {
   getNews();
 },[]);
