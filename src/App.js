@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NewsPlate from './NewsPlate';
 import axios from 'axios';
 import './App.css';
 
@@ -11,7 +12,6 @@ const getNews = () => {
   axios.get(`http://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`)
   .then( response => {
     setNews(response.data.articles)
-    console.log(response.data)
   })
   .catch( error => {
     console.log(error)
@@ -26,7 +26,7 @@ useEffect(() => {
     <div className="App">
     <div className="header ">News</div>
     {news.map((data, index) => (  
-      <h5 key={index}>{data.title}</h5>
+    <div key={index}><NewsPlate data={data} index={index} /></div>
     ))}
     </div>
   );
