@@ -2,9 +2,6 @@ import React from 'react';
 
 function NewsPlate(props) {
 
-    // const loadMore = () => {
-    //     window.open(props.data.url,'_blank')
-    // }
 
     return (
         <div className="container">
