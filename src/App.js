@@ -33,7 +33,6 @@ const getNews = () => {
           })
           .then((response)=>{
             setNews(response.data.value)
-            console.log(response)
           })
           .catch((error)=>{
             console.log(error)
